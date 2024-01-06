@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    <div class="cruds">
+        <div class="head">
+            <h1>CRUDS</h1>
+            <p>Product Mangment System</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <div class="prices">
+                <input onkeyup=" getTotal()" type="number" id="price" placeholder="Price">
+                <input onkeyup=" getTotal()" type="number" id="taxes" placeholder="Taxes">
+                <input onkeyup=" getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup=" getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="submit">Create</button>
+        </div>
+
+        <div class="outputs">
+            <div class="searchBlock">
+                <input type="search" onkeyup="searchData(this.value)" id="search" placeholder="Search">
+                <div class="type-search">
+                    <button onclick="searchBy(this.id)" id="search-title">Search By Title</button>
+                    <button onclick="searchBy(this.id)" id="search-category">Search By Category</button>
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tilte</th>
+                        <th>Price</th>
+                        <th>Taxes</th>
+                        <th>Ads</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
